@@ -1,6 +1,6 @@
 <form action="/figures/<%=@figure.id%>" method="POST">
   <input type="hidden" name="_method" id="hidden" value="PATCH">
-  <h3>Your Historical Figure's Current Information</h3>
+  <h3>Current Information</h3>
   <h4>Name:</h4><%=@figure.name%>
   <br></br>
 
@@ -17,7 +17,7 @@
   <%end%>
 
 
-  <h3>Edit Your Historical Figure's Information Below:</h3>
+  <h3>Edit Information Below:</h3>
 
     <label>Figure Name:</label>
     <input type="text" name="figure[name]" id="figure_name">
