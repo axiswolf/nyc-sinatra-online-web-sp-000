@@ -48,7 +48,7 @@ class FiguresController < ApplicationController
 
     @figure.landmarks.each do |landmark|
       if landmark.figure_id == params["id"].to_i
-        old_landmark = Landmark.find_by(figure_id: params["id"])
+        old_landmark = Landmark.find_by(params["id"])
         old_landmark.name = params["landmark"]["name"]
         old_landmark.save
         end
