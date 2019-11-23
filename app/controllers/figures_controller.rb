@@ -14,7 +14,7 @@ class FiguresController < ApplicationController
       # title_params = params["title"]["name"]
       # landmark_params = params["landmark"]
 
-      if !title_params.empty?
+      if !["title"]["name"].empty?
         title = Title.create(params["title"])
         @figure.titles << title
       end
