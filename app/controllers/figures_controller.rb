@@ -11,8 +11,8 @@ class FiguresController < ApplicationController
 
   post '/figures' do
       @figure = Figure.create(params["figure"])
-      title_params = params["title"]["name"]
-      landmark_params = params["landmark"]
+      # title_params = params["title"]["name"]
+      # landmark_params = params["landmark"]
 
       if !title_params.empty?
         title = Title.create(params["title"])
