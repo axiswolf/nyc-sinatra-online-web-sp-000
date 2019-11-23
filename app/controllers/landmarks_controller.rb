@@ -8,7 +8,7 @@ class LandmarksController < ApplicationController
 
   post '/landmarks' do
     @landmark = Landmark.create(params["landmark"])
-    erb '/landmarks/show'
+    erb :'/landmarks/show'
   end
 
   get '/landmarks' do
