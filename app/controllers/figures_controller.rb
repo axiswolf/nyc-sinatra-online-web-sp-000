@@ -10,10 +10,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-
       @figure = Figure.create(params["figure"])
-      #figure = Figure.find_or_create_by(name: params["figure_name"])
-
       title_params = params["title"]["name"]
       landmark_params = params["landmark"]
 
