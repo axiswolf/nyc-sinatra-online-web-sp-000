@@ -27,4 +27,12 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/edit'
   end
 
+  patch '/landmarks/:id' do
+      @landmark = Landmark.find_by(parmas["id"])
+      @landmark.name = params["landmark"]["name"]
+      @landmark.year_completed = params["landmark"]["year_completed"].to_i
+      @landmark.save
+      redirect to "landmarks/#{@landmark.id}"
+  end
+
 end
