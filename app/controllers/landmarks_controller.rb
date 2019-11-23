@@ -27,7 +27,7 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
-      @landmark = Landmark.find_by(params["id"])
+      @landmark = Landmark.find_by(id: params["id"])
       @landmark.name = params["landmark"]["name"]
       @landmark.year_completed = params["landmark"]["year_completed"].to_i
       @landmark.save
