@@ -16,7 +16,6 @@ class FiguresController < ApplicationController
     # landmark_params = params["landmark"]
     # @figure = Figure.create(params["figure"])
     @figure = Figure.find_or_create_by(name: params["figure_name"])
-    binding.pry
     if !params["title"]["name"].empty?
       @figure.titles << Title.create(name:params["title"]["name"])
     end
