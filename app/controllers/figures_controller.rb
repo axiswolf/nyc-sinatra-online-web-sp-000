@@ -28,6 +28,7 @@ class FiguresController < ApplicationController
     puts params
 
     redirect to "figures/#{@figure.id}"
+    binding.pry
   end
 
     get '/figures/:id' do
