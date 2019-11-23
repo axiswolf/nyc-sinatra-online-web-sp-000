@@ -28,13 +28,11 @@ class FiguresController < ApplicationController
       end
       @figure.save
 
-      redirect to "/figures/#{@figure.id}" #moves to route GET '/figures/:id'
+      redirect to "/figures/#{@figure.id}"
     end
 
     get '/figures/:id' do
-
       @figure = Figure.find_by(id: params["id"])
-
       erb :'figures/show'
     end
 
