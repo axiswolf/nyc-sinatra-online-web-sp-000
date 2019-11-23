@@ -19,6 +19,7 @@ class LandmarksController < ApplicationController
 
   get '/landmarks/:id' do
     # find by id
+    @landmark = Landmark.find_by(params["id"])
   end
 
 end
