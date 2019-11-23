@@ -32,4 +32,9 @@ class FiguresController < ApplicationController
       erb :'figures/show'
     end
 
+    get '/figures' do
+      @figures = Figure.all
+      erb :'figures/show'
+    end
+
 end
