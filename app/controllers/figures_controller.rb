@@ -14,12 +14,12 @@ class FiguresController < ApplicationController
       # title_params = params["title"]["name"]
       # landmark_params = params["landmark"]
 
-      if !["title"]["name"].empty?
+      if !params["title"]["name"].empty?
         title = Title.create(params["title"])
         @figure.titles << title
       end
 
-      if !landmark_params.empty?
+      if !params["landmark"].empty?
           landmark = Landmark.create(landmark_params)
           @figure.landmarks << landmark
       end
